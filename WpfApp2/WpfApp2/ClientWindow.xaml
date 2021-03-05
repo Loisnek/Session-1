@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp2.ClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="ClientWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="deleteC" Content="Delete" HorizontalAlignment="Left" Margin="591,253,0,0" VerticalAlignment="Top" Width="75" Click="DeleteC"/>
+        <Label Content="DELETE" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="605,94,0,0" RenderTransformOrigin="-7.172,-11.945"/>
+        <Label Content="ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="544,162,0,0" RenderTransformOrigin="-7.172,-11.945"/>
+        <TextBox x:Name="DeleteId" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="591,162,0,0"/>
+        <Button x:Name="CreateC" Content="Create" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="132,320,0,0" Click="createC"/>
+        <TextBox x:Name="FN2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="112,112,0,0"/>
+        <TextBox x:Name="MN2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="112,162,0,0"/>
+        <TextBox x:Name="LN1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="112,210,0,0"/>
+        <TextBox x:Name="DS2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="112,259,0,0"/>
+        <Label Content="CREATE" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="147,55,0,0" RenderTransformOrigin="-7.172,-11.945"/>
+        <Button x:Name="UpdateC" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="348,373,0,0" RenderTransformOrigin="0.529,0.243" Click="updateC"/>
+        <TextBox x:Name="FN1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="324,162,0,0"/>
+        <TextBox x:Name="MN1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="324,210,0,0"/>
+        <TextBox x:Name="LN3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="324,259,0,0"/>
+        <TextBox x:Name="DS1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="324,306,0,0"/>
+        <Label Content="UPDATE" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="371,63,0,0" RenderTransformOrigin="-7.172,-11.945"/>
+        <TextBox x:Name="UpdateId" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="324,112,0,0"/>
+
+    </Grid>
+</Window>
