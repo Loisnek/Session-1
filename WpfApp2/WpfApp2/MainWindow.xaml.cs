@@ -29,7 +29,7 @@ namespace WpfApp2
 
         private void Delete(object sender, RoutedEventArgs e)
         {
-            var db = new dbContext();
+            var db = new Entities();
             db.agents.Load();
             var delete = db.agents.Local.Where(p => p.Id == Convert.ToInt32(DeleteId.Text)).FirstOrDefault();
             db.agents.Remove(delete);
@@ -38,7 +38,7 @@ namespace WpfApp2
 
         private void Create(object sender, RoutedEventArgs e)
         {
-            var db = new dbContext();
+            var db = new Entities();
             var agent = new agents();
             agent.FirstName = FN.Text;
             agent.MiddleName = MN.Text;
@@ -54,7 +54,7 @@ namespace WpfApp2
 
         private void Update(object sender, RoutedEventArgs e)
         {
-            var db = new dbContext();
+            var db = new Entities();
             db.agents.Load();
             var agentUpdate = db.agents.Local.Where(p => p.Id == Convert.ToInt32(UpdateId.Text)).FirstOrDefault();
            

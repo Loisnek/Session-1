@@ -10,6 +10,21 @@
     <Property Name="LastName" Type="varchar" MaxLength="50" />
     <Property Name="DealShare" Type="int" />
   </EntityType>
+  <EntityType Name="apartments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address_City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address_Street" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address_House" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address_Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Coordinate_latitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="Coordinate_longitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalArea" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Rooms" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Floor" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="clients">
     <Key>
       <PropertyRef Name="Id" />
@@ -21,8 +36,46 @@
     <Property Name="Phone" Type="varchar" MaxLength="50" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="districts">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="area" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="houses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address_City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address_Street" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address_House" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address_Number" Type="varchar" MaxLength="50" />
+    <Property Name="Coordinate_latitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="Coordinate_longitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalFloors" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TotalArea" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lands">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Address_City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address_Street" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address_House" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address_Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Coordinate_latitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="Coordinate_longitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalArea" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityContainer Name="Хранилище dataModelContainer">
     <EntitySet Name="agents" EntityType="Self.agents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="apartments" EntityType="Self.apartments" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="clients" EntityType="Self.clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="districts" EntityType="Self.districts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="houses" EntityType="Self.houses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="lands" EntityType="Self.lands" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

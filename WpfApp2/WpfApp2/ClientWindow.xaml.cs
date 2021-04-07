@@ -27,7 +27,7 @@ namespace WpfApp2
 
         private void DeleteC(object sender, RoutedEventArgs e)
         {
-            var db = new dbContext();
+            var db = new Entities();
             db.clients.Load();
             var delete = db.clients.Local.Where(p => p.Id == Convert.ToInt32(DeleteId.Text)).FirstOrDefault();
             db.clients.Remove(delete);

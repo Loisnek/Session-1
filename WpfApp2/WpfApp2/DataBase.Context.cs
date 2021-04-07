@@ -13,10 +13,10 @@ namespace WpfApp2
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbContext : DbContext
+    public partial class Entities : DbContext
     {
-        public dbContext()
-            : base("name=dbContext")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -26,6 +26,10 @@ namespace WpfApp2
         }
     
         public virtual DbSet<agents> agents { get; set; }
+        public virtual DbSet<apartments> apartments { get; set; }
         public virtual DbSet<clients> clients { get; set; }
+        public virtual DbSet<districts> districts { get; set; }
+        public virtual DbSet<houses> houses { get; set; }
+        public virtual DbSet<lands> lands { get; set; }
     }
 }

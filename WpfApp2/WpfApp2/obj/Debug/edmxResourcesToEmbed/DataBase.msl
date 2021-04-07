@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище dataModelContainer" CdmEntityContainer="dbContext">
+  <EntityContainerMapping StorageEntityContainer="Хранилище dataModelContainer" CdmEntityContainer="Entities">
     <EntitySetMapping Name="agents">
       <EntityTypeMapping TypeName="dataModel.agents">
         <MappingFragment StoreEntitySet="agents">
@@ -9,6 +9,22 @@
           <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="DealShare" ColumnName="DealShare" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="apartments">
+      <EntityTypeMapping TypeName="dataModel.apartments">
+        <MappingFragment StoreEntitySet="apartments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+          <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+          <ScalarProperty Name="Address_House" ColumnName="Address_House" />
+          <ScalarProperty Name="Address_Number" ColumnName="Address_Number" />
+          <ScalarProperty Name="Coordinate_latitude" ColumnName="Coordinate_latitude" />
+          <ScalarProperty Name="Coordinate_longitude" ColumnName="Coordinate_longitude" />
+          <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+          <ScalarProperty Name="Rooms" ColumnName="Rooms" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -21,6 +37,43 @@
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="districts">
+      <EntityTypeMapping TypeName="dataModel.districts">
+        <MappingFragment StoreEntitySet="districts">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="area" ColumnName="area" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="houses">
+      <EntityTypeMapping TypeName="dataModel.houses">
+        <MappingFragment StoreEntitySet="houses">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+          <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+          <ScalarProperty Name="Address_House" ColumnName="Address_House" />
+          <ScalarProperty Name="Address_Number" ColumnName="Address_Number" />
+          <ScalarProperty Name="Coordinate_latitude" ColumnName="Coordinate_latitude" />
+          <ScalarProperty Name="Coordinate_longitude" ColumnName="Coordinate_longitude" />
+          <ScalarProperty Name="TotalFloors" ColumnName="TotalFloors" />
+          <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lands">
+      <EntityTypeMapping TypeName="dataModel.lands">
+        <MappingFragment StoreEntitySet="lands">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+          <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+          <ScalarProperty Name="Address_House" ColumnName="Address_House" />
+          <ScalarProperty Name="Address_Number" ColumnName="Address_Number" />
+          <ScalarProperty Name="Coordinate_latitude" ColumnName="Coordinate_latitude" />
+          <ScalarProperty Name="Coordinate_longitude" ColumnName="Coordinate_longitude" />
+          <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

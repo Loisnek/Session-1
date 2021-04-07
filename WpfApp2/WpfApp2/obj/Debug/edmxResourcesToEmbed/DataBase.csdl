@@ -10,6 +10,21 @@
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="DealShare" Type="Int32" />
   </EntityType>
+  <EntityType Name="apartments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address_City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address_Street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address_House" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Coordinate_latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Coordinate_longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Rooms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Floor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
   <EntityType Name="clients">
     <Key>
       <PropertyRef Name="Id" />
@@ -21,8 +36,46 @@
     <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityContainer Name="dbContext" annotation:LazyLoadingEnabled="true">
+  <EntityType Name="districts">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="area" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="houses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address_City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address_Street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address_House" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coordinate_latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Coordinate_longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalFloors" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TotalArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lands">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Address_City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address_Street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address_House" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Coordinate_latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Coordinate_longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalArea" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="agents" EntityType="Self.agents" />
+    <EntitySet Name="apartments" EntityType="Self.apartments" />
     <EntitySet Name="clients" EntityType="Self.clients" />
+    <EntitySet Name="districts" EntityType="Self.districts" />
+    <EntitySet Name="houses" EntityType="Self.houses" />
+    <EntitySet Name="lands" EntityType="Self.lands" />
   </EntityContainer>
 </Schema>

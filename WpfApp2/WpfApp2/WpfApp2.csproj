@@ -70,6 +70,12 @@
     <Compile Include="agents.cs">
       <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
+    <Compile Include="apartments.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apartments.xaml.cs">
+      <DependentUpon>Apartments.xaml</DependentUpon>
+    </Compile>
     <Compile Include="clients.cs">
       <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
@@ -88,10 +94,43 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataBase.edmx</DependentUpon>
     </Compile>
+    <Compile Include="districts.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="houses.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Houses.xaml.cs">
+      <DependentUpon>Houses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="lands.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lands.xaml.cs">
+      <DependentUpon>Lands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Session.xaml.cs">
+      <DependentUpon>Session.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Session2.xaml.cs">
+      <DependentUpon>Session2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Table.xaml.cs">
       <DependentUpon>Table.xaml</DependentUpon>
     </Compile>
+    <Page Include="Apartments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Houses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lands.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,6 +149,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Session.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Session2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Table.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
